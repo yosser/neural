@@ -62,6 +62,7 @@ export class NeuralNetwork {
         const finalInputs = this.feedForward(hiddenOutputs, this.weightsHiddenOutput);
         return finalInputs.map(this.sigmoid);
     }
+
     private transposeMatrix(matrix: number[][]): number[][] {
         return matrix[0].map((_, i) => matrix.map(row => row[i]));
     }
