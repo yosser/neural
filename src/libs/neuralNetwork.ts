@@ -18,6 +18,14 @@ export class NeuralNetwork {
         this.weightsHiddenOutput = this.initializeWeights(hiddenNodes, outputNodes);
     }
 
+    public getWeightsInput(): number[][] {
+        return this.weightsInputHidden;
+    }
+
+    public getWeightsOutput(): number[][] {
+        return this.weightsHiddenOutput;
+    }
+
     private initializeWeights(rows: number, cols: number): number[][] {
         return Array.from({ length: rows }, () => Array.from({ length: cols }, () => Math.random() * 2 - 1));
     }
